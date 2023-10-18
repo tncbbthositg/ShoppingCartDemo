@@ -5,9 +5,11 @@ A potential employer asked me to put together a demo showing the way I approach 
 
 ## Approach
 
-I treated the ShoppingCart component like the abstraction I wanted to build.  Thus, it's the component with tests.  I'll likely go and pull more reusable logic out of the "application side" and test it too.  I'm also going to add some kind of helper around the cart items and quantity change handler.  It's kind of a copout to say, "oh, I didn't test that because that logic doesn't belong in the card component per se."
+I like treating components as though I'm going to someday pull them out of the project and put them in a separate library.  It helps me keep things decoupled.  This is part of the reason I very seldom use global state rather than using local state and drilling down.
 
-Also, the employer wants to see this built with Redux.  I wouldn't in this case because it's so simple, Zustand is more pleasant, the Context API would likely suit, etc.  I'd rather just have state and drill the cart down . . . but . . . alas, I'm going to add some form of global state . . . and it'll probably be Redux.
+Typically, when I need global state, I can get what I want from the Context API.  When I can't I like Zustand.  For this demo, they wanted to see Redux and it just feels wrong.  I don't want to build a ShoppingCart component that's tightly coupled to a global state manager.  I'd rather pass state and handlers into the component.
+
+I'm going to pull my local state and handlers into a hook so that I can test it independently of the "demo app" which I still don't feel compelled to test.  Then, I can replace the guts of the hook with whatever I want (like, local state . . . or local storage . . . or Redux).
 
 
 ## Getting Things Running
