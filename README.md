@@ -31,6 +31,8 @@ yart test --collect-coverage --watch-all
 ```
 
 
-## Coming Soon
+## Demo App
 
-I'm going to add a github page so you can see what the app does.
+You can interact with this application on github pages!
+
+[https://tncbbthositg.github.io/ShoppingCartDemo/](https://tncbbthositg.github.io/ShoppingCartDemo/)
