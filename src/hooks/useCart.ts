@@ -1,5 +1,6 @@
-import { useCallback, useState } from "react";
+import { useCallback } from "react";
 import { CartItem, Item } from "../models";
+import { useLocalStorage } from "usehooks-ts";
 
 type UseCartResult = {
   cartItems: CartItem[];
@@ -10,7 +11,7 @@ type UseCartResult = {
 type UseCart = () => UseCartResult;
 
 export const useCart: UseCart = () => {
-  const [cartItems, setCartItems] = useState<CartItem[]>([]);
+  const [cartItems, setCartItems] = useLocalStorage<CartItem[]>('cart', []);
 
   const addItemToCart = useCallback(
     (item: Item) => {

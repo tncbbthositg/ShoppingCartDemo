@@ -12,6 +12,21 @@ Typically, when I need global state, I can get what I want from the Context API.
 I'm going to pull my local state and handlers into a hook so that I can test it independently of the "demo app" which I still don't feel compelled to test.  Then, I can replace the guts of the hook with whatever I want (like, local state . . . or local storage . . . or Redux).
 
 
+### For a Fun Exercise, Check This Out
+
+You can replace `useState` with `useLocalStorage` from [https://www.npmjs.com/package/usehooks-ts](usehooks-ts) and it Just Works™!
+
+```ts
+  const [cartItems, setCartItems] = useState<CartItem[]>([]);
+```
+
+```ts
+  const [cartItems, setCartItems] = useLocalStorage<CartItem[]>('cart', []);
+```
+
+Open it in two separate windows and change one . . . watch what happens to the other window.  Or close the window and open it back up again . . . and magic ensues.  I'll create a tag so we can easily get back to this state and see it work.
+
+
 ## Getting Things Running
 
 Start the app with:

@@ -12,6 +12,7 @@ const testItem3: Item = {
   image: '',
   price: 3.33,
 };
+
 const testItem7: Item = {
   id: v4(),
   name: 'Test Item 7',
