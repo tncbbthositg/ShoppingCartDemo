@@ -10,6 +10,10 @@ const testItem3: Item = {
   price: 3.33,
 };
 
+beforeEach(() => {
+  localStorage.clear();
+});
+
 describe(useCart, () => {
   it('returns an empty array to start with', () => {
     const { result } = renderHook(() => useCart());
