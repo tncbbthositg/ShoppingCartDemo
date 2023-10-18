@@ -6,6 +6,21 @@ on:
       - main
 
 jobs:
+  test:
+    name: Test App
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+
+    steps:
+      - uses: actions/checkout@v3
+      - uses: actions/setup-node@v3
+        with:
+          node-version-file: '.node-version'
+      - name: Install Dependencies
+        run: yarn install
+      - name: Test
+        run: yarn test
+
   build:
     name: Build Demo Site
     runs-on: ubuntu-latest
@@ -24,7 +39,6 @@ jobs:
         run: yarn install
       - name: Build
         run: yarn build
-
       - uses: actions/upload-artifact@master
         with:
           name: page
@@ -40,7 +54,9 @@ jobs:
       id-token: write
       pages: write
 
-    needs: build
+    needs:
+      - build
+      - test
 
     environment:
       name: github-pages
