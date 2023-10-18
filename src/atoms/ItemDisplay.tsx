@@ -10,16 +10,18 @@ export const ItemDisplay: FunctionComponent<ItemDisplayProps> = (props) => {
   const { item, onAddToCart } = props;
 
   return (
-    <div className="flex space-x-4">
-      <img src={item.image} alt={item.name} className="rounded" />
-      <div className="grow">
-        <h2 className="text-2xl">{item.name}</h2>
-        <span>{item.price}</span>
+    <div className="flex flex-col xl:flex-row gap-4">
+      <div className="flex grow space-x-4">
+        <img src={item.image} alt={item.name} className="rounded" />
+        <div className="grow">
+          <h2 className="text-2xl">{item.name}</h2>
+          <span>{item.price}</span>
+        </div>
       </div>
       { !!onAddToCart && (
         <div>
           <button
-            className="bg-teal-700 text-white px-6 py-3 rounded opacity-70 hover:opacity-100"
+            className="bg-teal-700 text-white px-6 py-3 rounded opacity-70 hover:opacity-100 w-full"
             type="button"
             onClick={() => onAddToCart(item)}
           >

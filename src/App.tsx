@@ -44,7 +44,7 @@ function App() {
   return (
     <div className="grid md:grid-cols-2 gap-8 p-8 min-h-screen">
       <ContentSection heading="Store Front">
-        <div className="space-y-4">
+        <div className="space-y-10">
           {
             ITEMS.map((item) => (
               <ItemDisplay key={item.id} item={item} onAddToCart={addItemToCart} />)
