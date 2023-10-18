@@ -14,7 +14,7 @@ I'm going to pull my local state and handlers into a hook so that I can test it 
 
 ### For a Fun Exercise, Check This Out
 
-You can replace `useState` with `useLocalStorage` from [https://www.npmjs.com/package/usehooks-ts](usehooks-ts) and it Just Works™!
+You can replace `useState` with `useLocalStorage` from [usehooks-ts](https://www.npmjs.com/package/usehooks-ts) and it Just Works™!
 
 ```ts
   const [cartItems, setCartItems] = useState<CartItem[]>([]);
