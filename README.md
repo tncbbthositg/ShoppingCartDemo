@@ -27,6 +27,14 @@ You can replace `useState` with `useLocalStorage` from [usehooks-ts](https://www
 Open it in two separate windows and change one . . . watch what happens to the other window.  Or close the window and open it back up again . . . and magic ensues.  I'll create a tag so we can easily get back to this state and see it work.
 
 
+## Consuming the ShoppingCart Component
+
+`ShoppingCart` component requires a collection of `CartItems`.  This is a reference to an `Item` and a quantity.  The shopping cart is also responsible for calling for quantity changes so you pass in an `onQuantityChange` handler.  The ShoppingCart is slightly agnostic regarding what the consumer does to handle this action.  It does expect this action to remove the item from the cart, but the consumer can decide how that gets done.
+
+If we need more control over quantity decrement behavior or we don't want to delete at 0, we can always add a delete handler later.
+
+That's it!  You can choose how you want to present the cart.  It should work fine on the page or in a popup.
+
 ## Getting Things Running
 
 Start the app with:
