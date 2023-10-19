@@ -10,7 +10,7 @@ export const ItemDisplay: FunctionComponent<ItemDisplayProps> = (props) => {
   const { item, onAddToCart } = props;
 
   return (
-    <div className="flex flex-col xl:flex-row gap-4">
+    <div className="flex flex-col lg:flex-row gap-4">
       <div className="flex grow space-x-4">
         <img src={item.image} alt={item.name} className="rounded" />
         <div className="grow">

@@ -26,7 +26,7 @@ export const ShoppingCart: FunctionComponent<ShoppingCartProps> = (props) => {
     <div className='space-y-10'>
       {
         cartItems.map(cartItem => (
-          <div className='flex flex-col xl:flex-row gap-4' key={cartItem.item.id}>
+          <div className='flex flex-col gap-4' key={cartItem.item.id}>
             <div className='grow'>
               { children(cartItem.item) }
             </div>

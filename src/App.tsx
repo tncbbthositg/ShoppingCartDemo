@@ -7,8 +7,8 @@ function App() {
   const { cartItems, addItemToCart, changeItemQuantity} = useCart();
 
   return (
-    <div className="grid md:grid-cols-2 gap-8 p-8 min-h-screen">
-      <ContentSection heading="Store Front">
+    <div className="flex flex-col md:flex-row gap-8 p-8 min-h-screen">
+      <ContentSection heading="Store Front" className="grow">
         <div className="space-y-10">
           {
             ITEMS.map((item) => (
@@ -18,7 +18,7 @@ function App() {
         </div>
       </ContentSection>
 
-      <ContentSection heading="Shopping Cart">
+      <ContentSection heading="Shopping Cart" className="md:w-3/12 min-w-[400px]">
           <ShoppingCart
             cartItems={cartItems}
             onQuantityChange={changeItemQuantity}
