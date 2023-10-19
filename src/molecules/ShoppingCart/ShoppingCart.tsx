@@ -1,18 +1,12 @@
 import { FunctionComponent, ReactNode } from 'react';
 import { CartItem, Item } from '../../models';
 import { QuantityControl, QuantityControlHandlers } from './QuantityControl';
+import { formatCurrency } from '../../utilities';
 
 export type ShoppingCartProps = QuantityControlHandlers & {
   cartItems: CartItem[];
   children: (item: Item) => ReactNode;
 };
-
-const PRICE_FORMAT = new Intl.NumberFormat(
-  'en-US',
-  {
-    minimumFractionDigits: 2,
-  }
-);
 
 export const ShoppingCart: FunctionComponent<ShoppingCartProps> = (props) => {
   const { cartItems, children, onQuantityChange } = props;
@@ -43,7 +37,7 @@ export const ShoppingCart: FunctionComponent<ShoppingCartProps> = (props) => {
       }
 
       <div data-testid='cart-total' className='text-2xl font-bold text-right'>
-        Total: ${PRICE_FORMAT.format(totalAmount)}
+        Total: {formatCurrency(totalAmount)}
       </div>
     </div>
   );
