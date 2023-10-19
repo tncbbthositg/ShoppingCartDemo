@@ -1,7 +1,9 @@
-import { act, renderHook } from '@testing-library/react';
+import { act } from '@testing-library/react';
 import { useCart } from '../../src/hooks';
 import { Item } from '../../src/models';
 import { v4 } from 'uuid';
+
+import { renderHookWithStore as renderHook } from '../testUtils';
 
 const testItem3: Item = {
   id: v4(),
@@ -9,10 +11,6 @@ const testItem3: Item = {
   image: '',
   price: 3.33,
 };
-
-beforeEach(() => {
-  localStorage.clear();
-});
 
 describe(useCart, () => {
   it('returns an empty array to start with', () => {
