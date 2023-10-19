@@ -50,6 +50,5 @@ export const QuantityControl: FunctionComponent<QuantityControlProps> = (props) 
         </button>
       </div>
     </div>
-
   );
 }

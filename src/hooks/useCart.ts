@@ -27,7 +27,7 @@ export const useCart: UseCart = () => {
 
       setCartItems(newItems);
     },
-    [cartItems]
+    [cartItems, setCartItems]
   );
 
   const changeItemQuantity = useCallback(
@@ -44,7 +44,7 @@ export const useCart: UseCart = () => {
       newItems = newItems.filter((ci) => ci.quantity > 0);
       setCartItems(newItems);
     },
-    [cartItems]
+    [cartItems, setCartItems]
   );
 
   return { cartItems, addItemToCart, changeItemQuantity };
