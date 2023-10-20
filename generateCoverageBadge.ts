@@ -10,7 +10,7 @@ if (percentageCovered < 80) { color = 'yellow'; }
 else if (percentageCovered < 70) { color = 'critical'; }
 
 const format = {
-    label: 'coverage',
+    label: 'Coverage',
     message: `${percentageCovered}%`,
     color
 };

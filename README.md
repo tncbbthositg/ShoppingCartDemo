@@ -3,7 +3,7 @@
 A potential employer asked me to put together a demo showing the way I approach front-end development.  This was the assignment.
 
 
-![coverage](https://img.shields.io/badge/coverage-80%25-yellowgreen)
+![coverage](https://raw.githubusercontent.com/tncbbthositg/ShoppingCartDemo/main/coverage_badge.svg)
 ![build and deploy](https://github.com/tncbbthositg/ShoppingCartDemo/actions/workflows/deploy.yml/badge.svg)
 
 ## Approach
