@@ -52,10 +52,10 @@ You can run the tests with:
 yarn test
 ```
 
-It's just Jest, so this works too:
+Watch for changes with this command:
 
 ```
-yart test --collect-coverage --watch-all
+yarn run watch
 ```
 
 
