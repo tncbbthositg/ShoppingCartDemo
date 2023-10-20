@@ -55,7 +55,7 @@ yarn test
 Watch for changes with this command:
 
 ```
-yarn run watch
+yarn watch
 ```
 
 
