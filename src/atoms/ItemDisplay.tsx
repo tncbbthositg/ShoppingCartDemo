@@ -1,5 +1,6 @@
 import { FunctionComponent } from 'react';
 import { Item } from '../models';
+import { formatCurrency } from '../utilities';
 
 type ItemDisplayProps = {
   item: Item;
@@ -15,7 +16,7 @@ export const ItemDisplay: FunctionComponent<ItemDisplayProps> = (props) => {
         <img src={item.image} alt={item.name} className="rounded" />
         <div className="grow">
           <h2 className="text-2xl">{item.name}</h2>
-          <span>{item.price}</span>
+          <span>{formatCurrency(item.price)}</span>
         </div>
       </div>
       { !!onAddToCart && (
