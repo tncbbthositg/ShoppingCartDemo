@@ -8,7 +8,8 @@
     "build": "tsc && vite build",
     "lint": "eslint . --ext ts,tsx --report-unused-disable-directives --max-warnings 0",
     "preview": "vite preview",
-    "test": "jest"
+    "test": "jest --collect-coverage && ts-node-esm ./generateCoverageBadge.ts",
+    "watch": "jest --watch-all --verbose"
   },
   "dependencies": {
     "@reduxjs/toolkit": "^1.9.7",
@@ -38,6 +39,7 @@
     "@typescript-eslint/parser": "^6.0.0",
     "@vitejs/plugin-react": "^4.0.3",
     "babel-jest": "^29.7.0",
+    "badge-maker": "^3.3.1",
     "eslint": "^8.45.0",
     "eslint-plugin-react-hooks": "^4.6.0",
     "eslint-plugin-react-refresh": "^0.4.3",

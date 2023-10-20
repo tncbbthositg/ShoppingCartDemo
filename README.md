@@ -3,6 +3,9 @@
 A potential employer asked me to put together a demo showing the way I approach front-end development.  This was the assignment.
 
 
+![coverage](https://img.shields.io/badge/coverage-80%25-yellowgreen)
+![build and deploy](https://github.com/tncbbthositg/ShoppingCartDemo/actions/workflows/deploy.yml/badge.svg)
+
 ## Approach
 
 I like treating components as though I'm going to someday pull them out of the project and put them in a separate library.  It helps me keep things decoupled.  This is part of the reason I very seldom use global state rather than using local state and drilling down.
